@@ -23,6 +23,9 @@ def test_negative_numbers():
     with pytest.raises(Exception):
         add("-1,10")
 
+def test_custom_delimiter():
+    assert add("//X\n1X2") == 3
+
 test_empty()
 test_one_number()
 test_two_numbers()
@@ -30,3 +33,4 @@ test_unknown_amount_of_numbers()
 test_newline_delim()
 test_big_numbers()
 test_negative_numbers()
+test_custom_delimiter()
