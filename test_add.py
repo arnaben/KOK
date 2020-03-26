@@ -6,5 +6,9 @@ def test_empty():
 def test_one_number():
     assert add("1") == 1
 
+def test_two_numbers():
+    assert add("1,2") == 3
+
 test_empty()
 test_one_number()
+test_two_number()
