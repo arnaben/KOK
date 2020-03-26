@@ -11,4 +11,4 @@ def test_two_numbers():
 
 test_empty()
 test_one_number()
-test_two_number()
+test_two_numbers()
