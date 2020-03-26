@@ -1,3 +1,4 @@
+import pytest
 from add_functioon import add
 
 def test_empty():
@@ -19,7 +20,8 @@ def test_big_numbers():
     assert add("1001,1000") == 1000
 
 def test_negative_numbers():
-    assert add("-1,2") == "Negatives not allowed: -1"
+    with pytest.raises(Exception):
+        add("-1,10")
 
 test_empty()
 test_one_number()
@@ -27,3 +29,4 @@ test_two_numbers()
 test_unknown_amount_of_numbers()
 test_newline_delim()
 test_big_numbers()
+test_negative_numbers()
