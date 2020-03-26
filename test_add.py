@@ -15,8 +15,12 @@ def test_unknown_amount_of_numbers():
 def test_newline_delim():
     assert add("1\n2,3") == 6
 
+def test_big_numbers():
+    assert add("1001,1000") == 1000
+
 test_empty()
 test_one_number()
 test_two_numbers()
 test_unknown_amount_of_numbers()
 test_newline_delim()
+test_big_numbers()
